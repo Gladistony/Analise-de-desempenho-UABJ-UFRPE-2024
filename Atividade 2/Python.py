@@ -1,3 +1,6 @@
+import time
+
+inicial = time.time()
 #Ler dados do txt
 def ler_entrada(nome):
     arq = open(nome, 'r')
@@ -73,3 +76,6 @@ def processar_dados(caminho):
             lista.imprimir()
 
 processar_dados("Testes/arq-novo.txt")
+
+tempo_total = time.time() - inicial
+print("Tempo total: ", tempo_total)
