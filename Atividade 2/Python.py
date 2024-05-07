@@ -1,6 +1,5 @@
 import time
 
-inicial = time.time()
 #Ler dados do txt
 def ler_entrada(nome):
     arq = open(nome, 'r')
@@ -40,6 +39,9 @@ class L_Ligada:
         if self.cabeca.get_ponteiro() == None:
             self.cabeca = None
             return -1
+        if self.cabeca.get_numero() == numero:
+            self.cabeca = self.cabeca.get_ponteiro()
+            return 1
         atual = self.cabeca
         while atual.get_ponteiro() != None:
             if atual.get_ponteiro().get_numero() == numero:
@@ -75,7 +77,11 @@ def processar_dados(caminho):
         elif cmd[0] == 'P':
             lista.imprimir()
 
+inicial = time.time()
 processar_dados("Testes/arq-novo.txt")
-
 tempo_total = time.time() - inicial
 print("Tempo total: ", tempo_total)
+#Salvar as medições em um arquivo
+arq = open("Medicoes Python.txt", 'a')
+arq.write("Tempo total: "+str(tempo_total * 1000)+" ms\n")
+arq.close()
