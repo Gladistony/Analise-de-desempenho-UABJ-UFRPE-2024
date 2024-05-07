@@ -44,6 +44,19 @@ public class Teste {
             }
         }
         float tempo_final = System.nanoTime();
+        float tempo = (tempo_final - tempo_inicial) / 1000000;
         System.out.println("Tempo de execução: " + (tempo_final - tempo_inicial) / 1000000 + "ms");
+        File arquivo_saida = new File("Medicoes Java.txt");
+        try {
+            if (!arquivo_saida.exists()) {
+                arquivo_saida.createNewFile();
+            }
+            java.io.FileWriter fw = new java.io.FileWriter(arquivo_saida, true);
+            java.io.BufferedWriter bw = new java.io.BufferedWriter(fw);
+            bw.write("Java: " + tempo + "ms\n");
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
