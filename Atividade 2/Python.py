@@ -68,9 +68,7 @@ def processar_dados(caminho):
         lista.adicionar(int(dat), 999)
     for cmd in comandos:
         if cmd[0] == 'A':
-            if len(cmd) == 2:
-                lista.adicionar(int(cmd[1]), 0)
-            else:
+            if len(cmd) == 3:
                 lista.adicionar(int(cmd[1]), int(cmd[2]))
         elif cmd[0] == 'R':
             lista.remover(int(cmd[1]))

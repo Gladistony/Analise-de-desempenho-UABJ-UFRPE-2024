@@ -7,4 +7,4 @@ Java: 30.826496ms
 Java: 35.340286ms
 Java: 31.686657ms
 Java: 34.029568ms
-Java: 49.39776ms
+Java: 33.554432ms

@@ -32,9 +32,7 @@ public class Teste {
         for (String comando : comandos) {
             String[] cmd = comando.split(" ");
             if (cmd[0].equals("A")) {
-                if (cmd.length == 2) {
-                    lista.adicionar(Integer.parseInt(cmd[1]), 0);
-                } else if (cmd.length == 3) {
+                if (cmd.length == 3) {
                     lista.adicionar(Integer.parseInt(cmd[1]), Integer.parseInt(cmd[2]));
                 }
             } else if (cmd[0].equals("R")) {
