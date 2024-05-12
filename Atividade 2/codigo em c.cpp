@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class No{
     private:
@@ -20,6 +21,7 @@ class No{
             this->ponteiro = ponteiro;
         }
 };
+
 class L_Ligada{
     private:
         No* cabeca;
@@ -91,15 +93,29 @@ int main() {
             std::string comando = linha.substr(0, 2);
             //std::cout << comando << std::endl;
             if (comando == "4 "){
-                std::cout << linha << std::endl;
+                //std::cout << linha << std::endl;
                 //dividir a linha em substrings
-                
+                std::string arr[100]; // Fix the missing header file for the string class
+                std::istringstream iss(linha);
+                int i = 0;
+                while (iss.good() && i < 100) {
+                    iss >> arr[i];
+                    ++i;
+                }
+                //adicionar
+                for (int j = 0; j < i; ++j) {
+                    int numero = std::stoi(arr[j]);
+                    //lista.adicionar(numero, 999);
+                }
+                //lista.imprimir();
+
             } else {
                 comando = linha.substr(0, 1);
 
             }
 
         }
+        lista.imprimir();
 
     }else{
         std::cout << "Erro ao abrir o arquivo" << std::endl;
