@@ -68,17 +68,24 @@ class L_Ligada{
 
 };
 
+#include <filesystem>
 #include <iostream>
-#include <fstream>
-using namespace std;
+namespace fs = std::filesystem;
+
+#include <string> // Add this line
+
+#include <fstream> // Include the necessary header file for file output streams
 
 int main() {
-    // Carregar um arquivo de texo
-    string myText;
-    ifstream MyReadFile("Testes/arq-novo.txt");
-    while (getline (MyReadFile, myText)) {
-        std::cout << myText;
+    std::string caminho = "C:/Users/bisto/OneDrive/Documentos/GitHub/Analise-de-desempenho-UABJ-UFRPE-2024/Atividade 2/Testes/arq-novo.txt"; 
+    
+    //open file
+    std::ofstream arquivo(caminho);
+    if(arquivo.is_open()){
+        arquivo << "Hello World!";
+        arquivo.close();
+    }else{
+        std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
-    MyReadFile.close();
     return 0;
 }
