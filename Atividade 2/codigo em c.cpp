@@ -77,13 +77,30 @@ namespace fs = std::filesystem;
 #include <fstream> // Include the necessary header file for file output streams
 
 int main() {
+    #include <fstream> // Include the necessary header file for file input streams
+
     std::string caminho = "C:/Users/bisto/OneDrive/Documentos/GitHub/Analise-de-desempenho-UABJ-UFRPE-2024/Atividade 2/Testes/arq-novo.txt"; 
-    
+        
     //open file
-    std::ofstream arquivo(caminho);
+    std::ifstream arquivo(caminho); // Change ofstream to ifstream for file input
     if(arquivo.is_open()){
-        arquivo << "Hello World!";
-        arquivo.close();
+        //processar conteudo
+        std::string linha;
+        L_Ligada lista;
+        while(std::getline(arquivo, linha)){ // Change getline to std::getline
+            std::string comando = linha.substr(0, 2);
+            //std::cout << comando << std::endl;
+            if (comando == "4 "){
+                std::cout << linha << std::endl;
+                //dividir a linha em substrings
+                
+            } else {
+                comando = linha.substr(0, 1);
+
+            }
+
+        }
+
     }else{
         std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
