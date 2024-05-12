@@ -86,6 +86,7 @@ class L_Ligada{
 
 };
 
+
 #include <filesystem>
 #include <iostream>
 namespace fs = std::filesystem;
@@ -97,6 +98,8 @@ namespace fs = std::filesystem;
 int main() {
     #include <fstream> // Include the necessary header file for file input streams
 
+    std::time_t inicial = std::time(0);   // get time now
+    
     std::string caminho = "C:/Users/bisto/OneDrive/Documentos/GitHub/Analise-de-desempenho-UABJ-UFRPE-2024/Atividade 2/Testes/arq-novo.txt"; 
         
     //open file
@@ -153,6 +156,8 @@ int main() {
 
         }
         //lista.imprimir();
+        std::time_t finalC = std::time(0);   // get time now
+        std::cout << "Tempo de execucao: " << finalC - inicial << "s" << std::endl;
     }else{
         std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
