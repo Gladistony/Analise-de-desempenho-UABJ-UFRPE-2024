@@ -20,6 +20,9 @@ class No{
         void setPonteiro(No* ponteiro){
             this->ponteiro = ponteiro;
         }
+        bool existePonteiro(){
+            return this->ponteiro != nullptr;
+        }
 };
 
 class L_Ligada{
@@ -31,17 +34,30 @@ class L_Ligada{
         }
         void adicionar(int numero, int posicao){
             No* novo = new No(numero);
-            if(posicao == 0){
+            if (this->cabeca == nullptr){
+                this->cabeca = novo;
+                return;
+            }
+            if (posicao == 0){
                 novo->setPonteiro(this->cabeca);
                 this->cabeca = novo;
-            }else{
+                return;
+            } else {
                 No* anterior = this->cabeca;
-                for(int i = 0; i < posicao - 1; i++){
-                    anterior = anterior->getPonteiro();
+                int i = 0;
+                while(anterior->existePonteiro() && i < posicao - 1){
+                    if (anterior->existePonteiro()){
+                        anterior = anterior->getPonteiro();
+                        i++;
+                    } else {
+                        break;
+                    }
                 }
                 novo->setPonteiro(anterior->getPonteiro());
                 anterior->setPonteiro(novo);
             }
+
+
         }
         void remover(int numero){
             No* anterior = nullptr;
@@ -105,7 +121,7 @@ int main() {
                 //adicionar
                 for (int j = 0; j < i; ++j) {
                     int numero = std::stoi(arr[j]);
-                    //lista.adicionar(numero, 999);
+                    lista.adicionar(numero, 999);
                 }
                 //lista.imprimir();
 
