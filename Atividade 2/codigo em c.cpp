@@ -127,12 +127,32 @@ int main() {
 
             } else {
                 comando = linha.substr(0, 1);
-
+                std::string arr[3];
+                std::istringstream iss(linha);
+                int i = 0;
+                while (iss.good() && i < 3) {
+                    iss >> arr[i];
+                    ++i;
+                }
+                if (comando == "A"){
+                    int numero = std::stoi(arr[1]);
+                    int tamanho = arr[2].length(); // Replace len(arr[2]) with arr[2].length()
+                    if (tamanho > 0){
+                        int posicao = std::stoi(arr[2]);
+                        lista.adicionar(numero, posicao);
+                    }
+                    //std::cout << "Adicionar :" << tamanho << std::endl;
+                } else if (comando == "R"){
+                    int numero = std::stoi(arr[1]);
+                    lista.remover(numero);
+                } else if (comando == "P"){
+                    lista.imprimir();
+                    std::cout << std::endl;
+                }
             }
 
         }
-        lista.imprimir();
-
+        //lista.imprimir();
     }else{
         std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
