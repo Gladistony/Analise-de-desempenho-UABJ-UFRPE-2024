@@ -98,7 +98,7 @@ namespace fs = std::filesystem;
 int main() {
     #include <fstream> // Include the necessary header file for file input streams
 
-    std::time_t inicial = std::time(0);   // get time now
+    auto begin = chrono::high_resolution_clock::now();
     
     std::string caminho = "C:/Users/bisto/OneDrive/Documentos/GitHub/Analise-de-desempenho-UABJ-UFRPE-2024/Atividade 2/Testes/arq-novo.txt"; 
         
@@ -156,8 +156,19 @@ int main() {
 
         }
         //lista.imprimir();
-        std::time_t finalC = std::time(0);   // get time now
-        std::cout << "Tempo de execucao: " << finalC - inicial << "s" << std::endl;
+        auto end = chrono::high_resolution_clock::now();    
+        auto dur = end - begin;
+        auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(dur).count();
+
+        std::cout << "Tempo de execucao: " << ms << "ms" << std::endl;
+
+        //adicionar a contagem de tempo ao final do arquivo
+        std::string caminho = "C:/Users/bisto/OneDrive/Documentos/GitHub/Analise-de-desempenho-UABJ-UFRPE-2024/Atividade 2/Medicoes C++.txt";
+        std::ofstream arquivo(caminho, std::ios_base::app); // Change ofstream to ifstream for file input
+        if(arquivo.is_open()){
+            arquivo << "Tempo de execucao: " << ms << "ms" << std::endl;
+            arquivo.close();
+        }
     }else{
         std::cout << "Erro ao abrir o arquivo" << std::endl;
     }
