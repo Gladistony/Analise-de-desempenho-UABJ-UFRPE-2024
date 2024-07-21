@@ -1,0 +1,28 @@
+Analise dos dados
+Linguagem Java
+
+BubbleSort
+
+Media: 2.96585997
+Mediana: 2.9214657
+Memoria: 74.86195831298828 MB
+
+QuickSort
+
+Media: 0.01644394
+Mediana: 0.0164853
+Memoria: 29.46556701660156 MB
+
+Linguagem Python
+
+BubbleSort
+
+Media: 102.083696103096
+Mediana: 36.5833535194397
+Memoria: 24.3 MB
+
+QuickSort
+
+Media: 0.13995661735534667
+Mediana: 0.05107855796813965
+Memoria: 24.1 MB

@@ -1,0 +1,28 @@
+Filename: c:\Users\bisto\OneDrive\Documentos\GitHub\Analise-de-desempenho-UABJ-UFRPE-2024\Atividade 3\Python\Python Main.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    35     24.3 MiB     24.3 MiB           1   @profile(stream=log_file)
+    36                                         def medicaotempocommemoria(funcao, array, local):
+    37     24.3 MiB      0.0 MiB           1       inicio = time.time()
+    38     24.1 MiB     -0.2 MiB           1       funcao(array.copy())
+    39     24.1 MiB      0.0 MiB           1       fim = time.time()
+    40     24.1 MiB      0.0 MiB           1       tempo = fim - inicio
+    41     24.1 MiB      0.0 MiB           1       local.append(tempo)
+    42     24.1 MiB      0.0 MiB           1       print("Tempo: " + str(tempo) + " s")
+
+
+Filename: c:\Users\bisto\OneDrive\Documentos\GitHub\Analise-de-desempenho-UABJ-UFRPE-2024\Atividade 3\Python\Python Main.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    35     24.1 MiB     24.1 MiB           1   @profile(stream=log_file)
+    36                                         def medicaotempocommemoria(funcao, array, local):
+    37     24.1 MiB      0.0 MiB           1       inicio = time.time()
+    38     24.1 MiB     -0.0 MiB           1       funcao(array.copy())
+    39     24.1 MiB      0.0 MiB           1       fim = time.time()
+    40     24.1 MiB      0.0 MiB           1       tempo = fim - inicio
+    41     24.1 MiB      0.0 MiB           1       local.append(tempo)
+    42     24.1 MiB      0.0 MiB           1       print("Tempo: " + str(tempo) + " s")
+
+
