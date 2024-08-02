@@ -1,0 +1,15 @@
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (4, 'Eu, Robô', 4, 1950);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (5, '2001: Uma Odisseia no Espaço', 5, 1968);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (6, 'Androides Sonham com Ovelhas Elétricas?', 6, 1968);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (7, 'A Mão Esquerda da Escuridão', 7, 1969);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (8, 'It: A Coisa', 8, 1986);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (9, 'O Conto da Aia', 9, 1985);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (10, 'A Guerra dos Mundos', 10, 1898);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (11, 'Fahrenheit 451', 11, 1953);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (12, 'Vinte Mil Léguas Submarinas', 12, 1870);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (13, 'Duna', 13, 1965);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (14, 'O Guia do Mochileiro das Galáxias', 14, 1979);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (15, 'Neuromancer', 15, 1984);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (16, 'Deuses Americanos', 16, 2001);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (17, 'O Cavaleiro da Torre', 17, 1986);
+INSERT INTO Livro (ID_Livro, Titulo, ID_Autor, Ano_Publicacao) VALUES (18, 'Entrevista com o Vampiro', 18, 1976);

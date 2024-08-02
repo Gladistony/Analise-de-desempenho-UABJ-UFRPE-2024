@@ -1,0 +1,15 @@
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (4, 'David', 'david@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (5, 'Eva', 'eva@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (6, 'Frank', 'frank@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (7, 'Grace', 'grace@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (8, 'Hannah', 'hannah@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (9, 'Isaac', 'isaac@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (10, 'Julia', 'julia@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (11, 'Karl', 'karl@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (12, 'Laura', 'laura@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (13, 'Mike', 'mike@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (14, 'Nina', 'nina@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (15, 'Oliver', 'oliver@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (16, 'Paula', 'paula@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (17, 'Quentin', 'quentin@example.com');
+INSERT INTO Usuario (ID_Usuario, Nome, Email) VALUES (18, 'Rachel', 'rachel@example.com');

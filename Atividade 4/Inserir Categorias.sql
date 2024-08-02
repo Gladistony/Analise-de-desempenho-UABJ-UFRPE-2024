@@ -1,0 +1,15 @@
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (4, 'Terror');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (5, 'Mistério');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (6, 'Romance');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (7, 'História');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (8, 'Biografia');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (9, 'Drama');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (10, 'Thriller');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (11, 'Ficção Espacial');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (12, 'Romance Policial');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (13, 'Literatura Clássica');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (14, 'Ação');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (15, 'Científico');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (16, 'Literatura Infantil');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (17, 'Fantasia Épica');
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES (18, 'Realismo Mágico');
