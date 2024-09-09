@@ -1,47 +1,35 @@
 import sys
 import os
 
-def verifiacarNumero(valorString):
-    try:
-        int(valorString)
-        return True
-    except:
-        return False
-
 def operar(argumentos, id):
-    #encontrar qual a operação buscando um dos parametros
-    operacao = "@"
-    for i in argumentos:
-        if i in ["+", "-", "*", "/"]:
-            operacao = i
-            break
-    numero1 = -1
-    numero2 = -1
-    #encontrar os numeros
-    for i in range(len(argumentos)):
-        if verifiacarNumero(argumentos[i]):
-            numero1 = int(argumentos[i])
-            argumentos.pop(i)
-            break
-    for i in range(len(argumentos)):
-        if verifiacarNumero(argumentos[i]):
-            numero2 = int(argumentos[i])
-            argumentos.pop(i)
-            break
-    if numero1 == -1 or numero2 == -1 or operacao == "@":
+    # Encontrar a operação
+    operacoes = {"+", "-", "*", "/"}
+    operacao = next((arg for arg in argumentos if arg in operacoes), None)
+
+    # Encontrar os números
+    numeros = [int(arg) for arg in argumentos if arg.isdigit()]
+
+    if operacao is None or len(numeros) < 2:
         print("Argumentos inválidos!")
         return
+
+    numero1, numero2 = numeros[:2]
+
+    # Realizar a operação
     if operacao == "+":
-        print(f"Resultado da opercação {id}: {numero1 + numero2}")
+        resultado = numero1 + numero2
     elif operacao == "-":
-        print(f"Resultado da opercação {id}: {numero1 - numero2}")
+        resultado = numero1 - numero2
     elif operacao == "*":
-        print(f"Resultado da opercação {id}: {numero1 * numero2}")
+        resultado = numero1 * numero2
     elif operacao == "/":
         if numero2 == 0:
             print("Erro: Divisão por zero!")
-        else:
-            print(f"Resultado da opercação {id}: {numero1 / numero2}")
+            return
+        resultado = numero1 / numero2
+
+    print(f"Resultado da operação {id}: {resultado}")
+
 
 
 
@@ -62,6 +50,9 @@ def operacaoViaArquivo(nome_arquivo):
         print("Arquivo não encontrado!")
 
 argumentos = sys.argv
+if len(argumentos) < 2:
+    print("Argumentos insuficientes!")
+    sys.exit()
 nome_arquivo = argumentos[1]
 if ".txt" not in nome_arquivo:
     operacaoViaArgumento(argumentos)
