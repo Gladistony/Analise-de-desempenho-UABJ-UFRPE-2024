@@ -2,6 +2,7 @@ import sys
 import os
 
 def operar(argumentos, id):
+    
     # Encontrar a operação
     operacoes = {"+", "-", "*", "/"}
     operacao = next((arg for arg in argumentos if arg in operacoes), None)
@@ -30,9 +31,6 @@ def operar(argumentos, id):
 
     print(f"Resultado da operação {id}: {resultado}")
 
-
-
-
 def operacaoViaArgumento(argumentos):
     operar(argumentos[1:], 1)
 
@@ -40,9 +38,17 @@ def operacaoViaArquivo(nome_arquivo):
     args = []
     if os.path.exists(nome_arquivo):
         with open(nome_arquivo, "r") as arquivo:
-            for linha in arquivo:
-                linha = linha.replace("\n", "")
-                args.append(linha)
+            try:
+                quantidade_operacoes = int(arquivo.readline().strip())
+            except ValueError:
+                print("Erro: A primeira linha deve conter a quantidade de operações.")
+                return
+            
+            for _ in range(quantidade_operacoes):
+                linha = arquivo.readline().strip()
+                if linha:
+                    args.append(linha)
+        
         for i in range(len(args)):
             args[i] = args[i].split(" ")
             operar(args[i], i+1)
@@ -53,8 +59,9 @@ argumentos = sys.argv
 if len(argumentos) < 2:
     print("Argumentos insuficientes!")
     sys.exit()
-nome_arquivo = argumentos[1]
-if ".txt" not in nome_arquivo:
-    operacaoViaArgumento(argumentos)
+
+if argumentos[1] == "matematica":
+    operacaoViaArgumento(argumentos[1:])
 else:
+    nome_arquivo = argumentos[1]
     operacaoViaArquivo(nome_arquivo)
